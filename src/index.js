@@ -20,7 +20,7 @@ function printCrypto(response, cryptocurrency) {
   <h2>`The something in ${info} is ${response.main.datapoint}.`</h2>
   
   
-  ; //can also use .innerHTML to create new html formatting from JS.
+  ; 
 }
 
 function printError(error, cryptocurrency) {
