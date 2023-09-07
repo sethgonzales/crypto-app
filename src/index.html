@@ -9,30 +9,40 @@
 
 <body>
   <div class="container">
+    <div id="header">
+      <h1>Cryptocurrency Search</h1>
+      <p>Use the searchbar to find information about cryptocurrencies.</p>
+      <form id="form" class="form-inline">
+        <label for="crypto">Enter your search here: </label>
+        <div class="input-group mb-3">
+          <input id="crypto" type="text" name="crypto" class="form-control form-control-sm" placeholder="eg. bitcoin">
+          <div class="input-group-append">
+            <button type="submit" class="btn btn-primary" id="search">Search</button>
+          </div>
+        </div>
+      </form>
+    </div>
 
-    <h1>Cryptocurrency Seatch</h1>
-    <p>Use the searchbar to find information about cryptocurrencies.</p>
 
-    <form>
-      <label for="crypto">Enter your search here: </label>
-      <input id="crypto" type="text" name="crypto">
-      <button type="submit" class="btn-success" id="search">Search</button>
-    </form>
 
-    <div class="return-container">
+    <div id="return-container" class="hidden">
 
-      <div id="showName">
+      <div id="show-name">
       </div></br>
+      <div id="information-container">
+        <div id="show-price">
+        </div>
 
-      <div id="showPrice">
-      </div></br>
+        <div id="price-change">
+        </div>
 
-      <div id="showAuth">
-      </div></br>
+        <div id="show-auth">
+        </div></br>
 
-      <div id="showCountryPrice">
-      </div></br>
-
+        <div id="show-country-price">
+          <h4 class="country-header"></h4>
+        </div></br>
+      </div>
     </div>
 
   </div>
