@@ -9,23 +9,20 @@ import CryptoService from './crypto-service.js';
 async function getCryptoData(cryptocurrency) {
   const response = await CryptoService.getCryptoData(cryptocurrency);
   if (response.main) {
-    printCrypto(response, cryptocurrency);
+    printCrypto(response);
   } else {
-    printError(response, cryptocurrency);
+    printError(response);
   }
 }
 
-function printCrypto(response, cryptocurrency) {
+function printCrypto(response) {
   document.querySelector('#showResponse').innerHTML = 
-  <h2>`The something in ${info} is ${response.main.datapoint}.`</h2>
-  
-  
-  ; 
+  <h2>The something in ${response} is</h2>;
 }
 
-function printError(error, cryptocurrency) {
-  document.querySelector('#showResponse').innerText = `There was an error accessing the data for ${info}: 
-  ${error}.`;
+function printError(error) {
+  document.querySelector('#showResponse').innerHTML = 
+  <h2>There was an error accessing the data for ${error}.`</h2>;
 }
 
 function handleFormSubmission(event) {
